@@ -29,11 +29,11 @@ body {
 }
 
 .container img {
-  margin-left: 20px !important;
-    float: left;
-    max-width: 70px;
-    width: 100%;
-    border-radius: 10%;
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
 }
 
 .container img.right {
@@ -51,16 +51,12 @@ body {
   float: left;
   color: #999;
 }
-.bjchat{
-  display:flex;
-  padding:0px;
-}
 </style>
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 </head>
 <body>
 
-<h2>{{room}} - DoctorChat</h2>
+<h2>{{room}} - DjChat</h2>
 
 <div id="display">
 
@@ -88,7 +84,7 @@ setInterval(function(){
             }
         },
         error: function(response){
-            // alert('An error occured')
+            alert('An error occured')
         }
     });
 },1000);
@@ -139,16 +135,13 @@ setInterval(function(){
         <!-- <form id="paper"> -->
           <!-- <textarea ></textarea>   -->
         <!-- </form> -->
-        <!-- <div class="container">
+        <div class="container">
           <img id="playButton" class="playButton" src="../media/image/mic.png" onclick="speechToTextConversion();">
-        </div> -->
+        </div>
     
         <div id="wrapper">
           <form id="paper">
-            <div class="bjchat">
-            <input type="text" name="message" id="message" placeholder="The words spoken by you, will appear here in English." style="overflow: hidden; word-wrap: break-word; resize: none;  "/>
-            <img id="playButton" class="playButton" src="../media/image/mic.png" onclick="speechToTextConversion();">
-          </div>
+            <input type="text" name="message" id="message" placeholder="The words spoken by you, will appear here in English." rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "/>
             <input type="submit" value="Send">
           </form>
         </div>
